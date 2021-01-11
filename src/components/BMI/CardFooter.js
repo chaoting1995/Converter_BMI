@@ -1,4 +1,16 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const CardFooterStyle = styled.div`
+  min-height: 60px;
+  margin: 5px;
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+`;
 
 const CardFooter = (props) => {
   const { bmi } = props;
@@ -42,14 +54,13 @@ const CardFooter = (props) => {
     };
   }
   return (
-    <div
-      className="card-footer"
+    <CardFooterStyle
       style={{
         backgroundColor: criteria.backgroundColor,
       }}
     >
       {criteria.title}
-    </div>
+    </CardFooterStyle>
   );
 };
 
