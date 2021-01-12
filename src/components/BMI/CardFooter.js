@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const CardFooterStyle = styled.div`
+const CardFooterStyle = styled.footer`
   min-height: 60px;
   margin: 5px;
   border-radius: 0 0 16px 16px;
@@ -10,6 +10,7 @@ const CardFooterStyle = styled.div`
   justify-content: center;
   color: white;
   font-size: 18px;
+  cursor: pointer;
 `;
 
 const CardFooter = (props) => {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import styled from '@emotion/styled';
 
 const CardBody = styled.div`
@@ -10,6 +11,7 @@ const CardBody = styled.div`
   padding: 50px 50px 25px 50px;
   display: flex;
   flex-direction: column;
+  ${'' /* position: relative; */}
   ${'' /* align-items: center; */}
   label {
     margin-bottom: 30px;
@@ -19,7 +21,7 @@ const CardBody = styled.div`
     }
     cursor: pointer;
   }
-  input[type='text'] {
+  input[type='number'] {
     margin-left: 20px;
     margin-right: 10px;
     padding-right: 10px;
@@ -134,7 +136,7 @@ function BMIConverter(props) {
       <label>
         <span>HEIGHT</span>
         <input
-          type="text"
+          type="number"
           min="0"
           value={height}
           onChange={(e) => {
@@ -156,7 +158,7 @@ function BMIConverter(props) {
       <label>
         <span>WEIGHT</span>
         <input
-          type="text"
+          type="number"
           min="0"
           value={weight}
           onChange={(e) => {

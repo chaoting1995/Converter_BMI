@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import CardFooter from '../components/BMI/CardFooter';
+
 import BMIConverter from '../components/BMI/BMIConverter';
+import CardFooter from '../components/BMI/CardFooter';
+import Standard from '../components/BMI/Standard';
 
 const Container = styled.div`
   display: flex;
@@ -29,6 +31,22 @@ const Container = styled.div`
   font-size: 25px;
     font-weight: 600;
   }
+  position: relative;
+  overflow: hidden;
+  section {
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    top: 125px;
+    left: 400px;
+  }
+  footer:hover ~ section {
+    opacity: 1;
+    transition: 0.8s;
+    position: absolute;
+    top: 125px;
+    left: 50px;
+  }
 `;
 
 function BMIApp() {
@@ -40,6 +58,7 @@ function BMIApp() {
         <h1>BMI Converter</h1>
         <BMIConverter bmi={bmi} setBmi={setBmi} />
         <CardFooter bmi={bmi} setBmi={setBmi} />
+        <Standard />
       </Container>
     </>
   );
