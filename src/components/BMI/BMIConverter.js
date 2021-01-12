@@ -31,7 +31,7 @@ const CardBody = styled.div`
     background-color: #ebebeb;
     outline: none;
     border: none;
-    width: 80px;
+    width: 90px;
     height: 35px;
     border-radius: 15px;
   }
@@ -88,6 +88,7 @@ const CardBody = styled.div`
   & > div > :first-of-type {
     width: 70px;
     font-weight: 600;
+    overflow: hidden;
   }
   & > div > :nth-of-type(2) {
     margin-left: 20px;
@@ -98,12 +99,11 @@ const CardBody = styled.div`
     font-size: 20px;
     font-weight: 600;
     background-color: #f6f6f6;
-    outline: none;
-    border: none;
-    width: 80px;
+    width: 90px;
     height: 35px;
     border-radius: 15px;
     line-height: 35px;
+    overflow: hidden;
   }
   .wrap {
     height: 35px;
@@ -138,6 +138,7 @@ function BMIConverter(props) {
         <input
           type="number"
           min="0"
+          max="220"
           value={height}
           onChange={(e) => {
             setHeight(e.target.value);
